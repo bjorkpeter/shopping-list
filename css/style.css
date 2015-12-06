@@ -105,9 +105,47 @@ hr {
 	display: inline-block;
 }
 
-.result > p {
+.result-remove {
+	width: 400px;
+	height: 50px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	background-color: #E2A4A4;
+	text-align: center;
+	text-decoration: line-through;
+	display: inline-block;
+}
+
+.result, .result-remove > p {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 400;
 	font-size: 1em;
 	color: Black;
+}
+
+.close {
+	float: right;
+	position: relative;
+	bottom: 43px;
+	margin-right: 9px;
+}
+
+.check {
+	float: left;
+	position: relative;
+	top: 10px;
+	margin-left: 9px;
+	margin-right: -36px;
+}
+
+.add {
+	float: left;
+	position: relative;
+	top: 10px;
+	margin-left: 9px;
+	margin-right: -36px;
 }
