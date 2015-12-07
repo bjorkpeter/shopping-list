@@ -124,6 +124,7 @@ hr {
 	position: relative;
 	bottom: 43px;
 	margin-right: 9px;
+	cursor: pointer;
 }
 
 .check {
@@ -132,6 +133,7 @@ hr {
 	top: 10px;
 	margin-left: 9px;
 	margin-right: -36px;
+	cursor: pointer;
 }
 
 .add {
@@ -140,4 +142,5 @@ hr {
 	top: 10px;
 	margin-left: 9px;
 	margin-right: -36px;
+	cursor: pointer;
 }
