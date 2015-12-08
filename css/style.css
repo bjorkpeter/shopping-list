@@ -143,4 +143,5 @@ hr {
 	margin-left: 9px;
 	margin-right: -36px;
 	cursor: pointer;
+	display: none;
 }
