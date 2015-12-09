@@ -6,8 +6,13 @@ var rightbutton = '<img class="close" src="http://bjorkpeter.github.io/shopping-
 
 /*Allows ENTER Keydown to add text to list*/
 /*research append, prepend, val*/
+$('.textinput').keydown(function(a) {
+	if (a.keyCode == 13) {
+		$('.list').append('<div class="result">' + leftbutton + '<p>' + $('.add-items').val() + '</p>' + '</div>');
+	}
+})
   
-/*Allows RIGHT Button Clicks*/
+/*Allows LEFT Button Clicks*/
  $('.leftbutton').on('click', '.check', function() {
 	if ($(this).closest('.list > div').hasClass('result')) {
   		$(this).closest('.list > div').addClass( 'result-remove' );
