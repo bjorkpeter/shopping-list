@@ -5,15 +5,15 @@ var leftbutton = '<img class="check" src="http://bjorkpeter.github.io/shopping-l
 var rightbutton = '<img class="close" src="http://bjorkpeter.github.io/shopping-list/images/close.png" alt="close" title="click to remove item" width="30px>">'
 
 /*Allows ENTER Keydown to add text to list*/
-/*research append, prepend, val*/
 $('.textinput').keydown(function(a) {
 	if (a.keyCode == 13) {
-		$('.list').append('<div class="result">' + leftbutton + '<p>' + $('.add-items').val() + '</p>' + '</div>');
+		$('.list').prepend('<div class="result">' + leftbutton + '<p>' + $('.add-items').val() + '</p>' + rightbutton + '</div>');
+    $('input.add-items').val("");
 	}
 })
   
 /*Allows LEFT Button Clicks*/
- $('.leftbutton').on('click', '.check', function() {
+ $('.list').on('click', '.check', function() {
 	if ($(this).closest('.list > div').hasClass('result')) {
   		$(this).closest('.list > div').addClass( 'result-remove' );
   		$(this).closest('.list > div').removeClass( 'result' );
@@ -26,10 +26,10 @@ $('.textinput').keydown(function(a) {
 	});
   
   /*Allows RIGHT Button Clicks*/
-  $('.rightbutton').on('click', '.close', function() {
-	    $(this).closest('.list > div').remove('div')
+  $('.list').on('click', '.close', function() {
+	    $(this).closest('.list > div').fadeOut("fast")
   		
 	});
-  
-  /*Do I want to add animations?*/
+
+  /*THINK about: button to enter text as well as [enter], actually swapping the check mark for another image, animating additions, if entry is very long, the item box is screwed up*/
 });
