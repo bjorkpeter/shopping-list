@@ -8,8 +8,8 @@ var rightbutton = '<img class="close" src="http://bjorkpeter.github.io/shopping-
 $('.textinput').keydown(function(a) {
 	if (a.keyCode == 13) {
 		$('.list').prepend('<div class="result">' + leftbutton + '<p>' + $('.add-items').val() + '</p>' + rightbutton + '</div>');
-    $('input.add-items').val("");
-	}
+    	$('input.add-items').val("");
+		}
 })
   
 /*Allows LEFT Button Clicks*/
@@ -17,7 +17,6 @@ $('.textinput').keydown(function(a) {
 	if ($(this).closest('.list > div').hasClass('result')) {
   		$(this).closest('.list > div').addClass( 'result-remove' );
   		$(this).closest('.list > div').removeClass( 'result' );
-  		
 	} 	
 	else {
   		$(this).closest('.list > div').removeClass( 'result-remove' );
@@ -28,7 +27,6 @@ $('.textinput').keydown(function(a) {
   /*Allows RIGHT Button Clicks*/
   $('.list').on('click', '.close', function() {
 	    $(this).closest('.list > div').fadeOut("fast")
-  		
 	});
 
   /*THINK about: button to enter text as well as [enter], actually swapping the check mark for another image, animating additions, if entry is very long, the item box is screwed up*/
